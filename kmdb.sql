@@ -442,3 +442,7 @@ FROM movies INNER JOIN studios ON movies.studio_id = studios.id;
 .print "Top Cast"
 .print "========"
 .print ""
+
+SELECT movies.movie_title, actors.actor_name, characters.character_name
+FROM characters INNER JOIN movies ON characters.movie_id = movies.id
+INNER JOIN actors ON characters.actor_id = actors.id;
